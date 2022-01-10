@@ -17,7 +17,7 @@ class RetrofitActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit)
 
-        showPosts()
+//        showPosts()
 //        createPost()
         showComments()
 //        updatePost()
@@ -51,7 +51,7 @@ class RetrofitActivity : AppCompatActivity() {
                 val responseText = "Response code : ${response.code()}\n" +
                         "title: ${response.body()?.title}\n" +
                         "body: ${response.body()?.text}\n" +
-                        "userId: ${response.body()?.userId}" +
+                        "userId: ${response.body()?.userId}\n" +
                         "id: ${response.body()?.id}"
                 tvResponseCode.text = responseText
             }
@@ -91,7 +91,7 @@ class RetrofitActivity : AppCompatActivity() {
         RetrofitClient.instance.createPost(
             29,
             "Contoh Field",
-            "Contoh teks wkwkwkwkwkwkwkwwkwkwkwk"
+            "Contoh teks yang akan diubah pada bagian textnya"
         ).enqueue(object : Callback<CreatePostResponse> {
             override fun onResponse(
                 call: Call<CreatePostResponse>,

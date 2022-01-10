@@ -10,11 +10,10 @@ class CommentAdapter (private val listComment: ArrayList<CommentResponse>): Recy
     inner class CommentViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(commentResponse: CommentResponse){
             with(itemView){
-                val text = "posId: ${commentResponse.postId}\n" +
-                        "id: ${commentResponse.name}\n" +
-                        "email: ${commentResponse.email}\n" +
-                        "body: ${commentResponse.body}\n"
-
+                val text = "\bPost ID : \t ${commentResponse.postId}\n" +
+                        "Name : \t ${commentResponse.name}\n" +
+                        "Email : \t ${commentResponse.email}\n" +
+                        "Comment : \t ${commentResponse.body}"
                 tvText.text = text
             }
         }

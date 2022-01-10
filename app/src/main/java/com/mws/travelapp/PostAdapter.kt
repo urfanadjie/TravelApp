@@ -10,10 +10,10 @@ class PostAdapter (private val list: ArrayList<PostResponse>): RecyclerView.Adap
     inner class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(postResponse: PostResponse) {
             with(itemView) {
-                val text = "User ID: ${postResponse.userId}\n" +
-                        "id: ${postResponse.id}\n" +
-                        "title: ${postResponse.title}\n" +
-                        "text: ${postResponse.text}"
+                val text = "\bUser ID: ${postResponse.userId}\n" +
+                        "ID: ${postResponse.id}\n" +
+                        "Title: ${postResponse.title}\n" +
+                        "Text: ${postResponse.text}"
                 tvText.text = text
             }
         }
